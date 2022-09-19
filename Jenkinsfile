@@ -3,7 +3,7 @@ pipeline {
     environment {
         AWS_ACCESS_KEY_ID = credentials('jenkins-access-key-id')
         AWS_SECRET_ACCESS_KEY = credentials('jenkins-secret-access-key')
-        AWS_S3_BUCKET = "jenkins-web-server"
+        AWS_S3_BUCKET = "maven-teamcity"
         ARTIFACT_NAME = "sample-test-2.jar"
         AWS_EB_APP_NAME = "dotnet-web-server"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
