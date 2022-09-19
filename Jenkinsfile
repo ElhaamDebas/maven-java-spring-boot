@@ -3,13 +3,12 @@ pipeline {
     environment {
         AWS_ACCESS_KEY_ID = credentials('jenkins-access-key-id')
         AWS_SECRET_ACCESS_KEY = credentials('jenkins-secret-access-key')
-        AWS_S3_BUCKET = "artifact-bucket-repo-2"
-        ARTIFACT_NAME = "spring-boot.jar"
-        AWS_EB_APP_NAME = "maven-java-spring-boot"
+        AWS_S3_BUCKET = "jenkins-web-server"
+        ARTIFACT_NAME = "sample-test-2.jar"
+        AWS_EB_APP_NAME = "dotnet-web-server"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
-        AWS_EB_ENVIRONMENT = "Mavenjavaspringboot-env"
-        //SONAR_IP = "54.226.50.200"
-        //SONAR_TOKEN = "sqp_a70d878110f7f7a1228416febd75ab0b830a48a1"
+        AWS_EB_ENVIRONMENT = "Dotnetwebserver-env"
+        
     }
     stages {
         stage('Validate') {
